@@ -22,7 +22,8 @@ mediate(
   digits = 2,
   HTML_report = TRUE,
   summary_report = TRUE,
-  cores = NULL
+  cores = NULL,
+  imputed_data = FALSE
 )
 }
 \arguments{
@@ -61,6 +62,8 @@ mediate(
 \item{summary_report}{A boolean specifying if a summary report will be printed.}
 
 \item{cores}{A numeric value specifying the number of cores to be used for the Monte Carlo simulation. If this is set to NULL (default), it will auto-detect the number of cores to be used.}
+
+\item{imputed_data}{A boolean specifiying if the data is an imputed data in long format. The dataset much contains .imp (to identify the imputed data) and .id (to identify each observ3ation in each imputed data).}
 }
 \value{
 \code{mediate} generates a report in HTML format based on results from the mediation analysis. This report is saved in the working directory.
@@ -122,7 +125,7 @@ HTML_report = FALSE, digits = 3, cores = 2)
 #Results presented in a HTML report (This is the default).
 med_res <- mediate(y = "y", med = c("m"), treat = "x", ymodel = "regression",
 mmodel = c("regression"), treat_lv = 1, control_lv = 0, incint = TRUE, inc_mmint = FALSE,
-conf.level = 0.9, data = sim_data, sim = 1000, complete_analysis = TRUE, digits = 3)
+conf.level = 0.9, data = sim_data, sim = 1000, complete_analysis = TRUE, digits = 3, cores = 2)
 }
 
 #Two mediators, complete data analysis and no HTML report.
@@ -138,7 +141,7 @@ HTML_report = FALSE, digits = 3, cores = 2)
 med_res <- mediate(y = "sub_misuse", med = c("dev_peer","sub_exp"), treat = "fam_int",
 c = c("conflict","gender"), ymodel = "logistic regression", mmodel = c("logistic regression",
 "logistic regression"), treat_lv = 1, control_lv = 0, conf.level = 0.9,
-data = substance, sim = 1000, digits = 3)
+data = substance, sim = 1000, digits = 3, cores = 2)
 }
 
 }

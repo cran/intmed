@@ -1,7 +1,7 @@
 Package: intmed
 Type: Package
 Title: Mediation Analysis using Interventional Effects
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: person("Gary", "Chan", email = "c.chan4@uq.edu.au",
   role = c("aut", "cre","cph"))
 Description: Implementing the interventional effects for mediation analysis for up to 3 mediators.
@@ -12,15 +12,14 @@ Description: Implementing the interventional effects for mediation analysis for 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: stringr, tidyverse, MASS, mice, dplyr, EValue, tibble,
-        foreach, doParallel
-RoxygenNote: 7.0.2
+Imports: stringr, MASS, mice, dplyr, tibble, foreach, doParallel
+RoxygenNote: 7.1.1
 Depends: R (>= 3.5.0)
 Suggests: testthat, knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2020-02-24 09:16:02 UTC; Gary
+Packaged: 2020-08-27 13:05:22 UTC; gckc1
 Author: Gary Chan [aut, cre, cph]
 Maintainer: Gary Chan <c.chan4@uq.edu.au>
 Repository: CRAN
-Date/Publication: 2020-03-01 13:00:02 UTC
+Date/Publication: 2020-08-27 17:20:02 UTC

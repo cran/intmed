@@ -5,5 +5,5 @@
 \alias{intmed}
 \title{intmed: A package for mediation analysis using the interventional effect approach}
 \description{
-intmed: A package for mediation analysis using the interventional effect approach
+This package estimates mediation effect using the interventional effect approach and Monte Carlo simulation.
 }
